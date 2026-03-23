@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #07091A;
+  --color-bg-surface: #0B1124;
+  --color-bg-card: #101828;
+  --color-bg-elevated: #162034;
+  --color-bg-input: #09112A;
+  
+  --color-border-subtle: #182240;
+  --color-border-default: #1E2D50;
+  --color-border-strong: #283D6A;
+  --color-border-gold: rgba(201,168,76,0.28);
+  
+  --color-gold: #C9A84C;
+  --color-gold-bright: #E8C96A;
+  --color-gold-deep: #9A7018;
+  
+  --color-text-primary: #EEF2FF;
+  --color-text-secondary: #8FA3C4;
+  --color-text-muted: #445570;
+  
+  --color-success: #22C55E;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+  --color-violet: #8B5CF6;
+  --color-pink: #EC4899;
+  --color-teal: #14B8A6;
+
+  --font-sans: "Crimson Pro", Georgia, serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+  @apply bg-bg-base text-text-primary font-sans antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { @apply bg-bg-base; }
+::-webkit-scrollbar-thumb { @apply bg-border-default rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-gold; }
+
+.gold-text {
+  background: linear-gradient(135deg, #C9A84C 0%, #E8C96A 45%, #A07820 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-bg {
+  background: linear-gradient(135deg, #C9A84C 0%, #E8C96A 45%, #A07820 100%);
+}
